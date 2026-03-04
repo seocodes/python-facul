@@ -49,6 +49,7 @@ def approvedOrNot(avg):
 try:
     grades = getGrades()
     avg = calculateAvg(grades) 
+    print(f"Your average was: {avg}")
     print(approvedOrNot(avg))
 
 except IndexError:
