@@ -1,0 +1,1 @@
+investmentValue = float(input("Value: "))
