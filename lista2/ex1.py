@@ -3,7 +3,7 @@ numbers = []
 
 while True:
     try:
-        num = int(input(f"Enter the number: "))
+        num = int(input("Enter the number: "))
         
         if num == -1:
             break
