@@ -15,7 +15,7 @@ class VetorNaoOrdenado:
   
   def insere(self, valor):
     if self.ultima_posicao == self.capacidade - 1:
-      print('Capacidade mÃ¡xima atingida')
+      print('Capacidade máxima atingida')
     else:
       self.ultima_posicao += 1
       self.valores[self.ultima_posicao] = valor
@@ -27,16 +27,17 @@ class VetorNaoOrdenado:
     return -1
 
   def excluir(self, valor):
-    posicao = self.pesquisar(valor);
+    posicao = self.pesquisar(valor)
+
     if posicao == -1:
       return -1
     else:
       for i in range(posicao, self.ultima_posicao):
         self.valores[i] = self.valores[i + 1]
-      
+
       self.ultima_posicao -= 1
-      
-      
+
+
 vetor = VetorNaoOrdenado(7)
 
 vetor.insere('a')
@@ -49,10 +50,14 @@ vetor.insere('o')
 
 vetor.imprime()
 
-print(vetor.pesquisar('u'))
+print('\nPesquisa:') # \n para pular linha e separar da impressão do vetor
+print('a:', vetor.pesquisar('a'))
+print('g:', vetor.pesquisar('g'))
+print('t:', vetor.pesquisar('t'))
 
-print(vetor.pesquisar('a'))
+vetor.excluir('a')
+vetor.excluir('s')
+vetor.excluir('o')
 
-vetor.excluir('t')
-
-vetor.imprime()  # Mostrar que o valor foi excluído
+# Print após exclusões
+vetor.imprime()
